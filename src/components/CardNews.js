@@ -16,8 +16,24 @@ class CardNews extends HTMLElement{
         const cardLeft = document.createElement ("div");
         cardLeft.setAttribute("class", "card_left");
 
+        // transformando o resto do conteúdo do card_left em component 
+        const autor = document.createElement("span");
+        const linkTittle = document.createElement("a");
+        const newsContent = document.createElement("p");
+
+        // pendurando os components criados do card_left
+        cardLeft.appendChild(autor);
+        cardLeft.appendChild(linkTittle);
+        cardLeft.appendChild(newsContent);
+
         const cardRight = document.createElement ("div");
         cardRight.setAttribute("class", "card_right");
+
+        // transformando o conteúdo do card_right em component 
+        const newsImage = document.createElement("img");
+
+        // pendurando os components criados do card_right
+        cardRight.appendChild(newsImage);
 
         // prendendo os dois componentes cardLeft e cardRight no component pai, no caso: componentRoot
         componentRoot.appendChild(cardLeft);
