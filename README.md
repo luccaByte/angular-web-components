@@ -3,4 +3,4 @@ Web components no front-end
 
 # Definindo uma Component
 
-Criando uma tag HTML que não existe que retorna o "Olá Mundo!"
+Aqui há um exemplo bem direto sobre o que é e como constrói uma web component
