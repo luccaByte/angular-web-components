@@ -18,12 +18,13 @@ class CardNews extends HTMLElement{
 
         // transformando o resto do conteúdo do card_left em component 
         const autor = document.createElement("span");
-        //Adicionando "By" automaticamente na área de span ou "By anonumous" caso o autor não adicione seu nome
+        //Adicionando "By" automaticamente na área de span ou "By anonymous" caso o autor não adicione seu nome
         autor.textContent = "By " + (this.getAttribute("autor") || "anonymous");
 
         const linkTitle = document.createElement("a");
         linkTitle.textContent = this.getAttribute("title");
-
+        linkTitle.href = this.getAttribute("link-url");
+        
         const newsContent = document.createElement("p");
         newsContent.textContent = this.getAttribute("content");
 
@@ -37,6 +38,8 @@ class CardNews extends HTMLElement{
 
         // transformando o conteúdo do card_right em component 
         const newsImage = document.createElement("img");
+        newsImage.src = this.getAttribute("photo") || "assets/fotoDefault.jpg";
+        newsImage.alt = "Foto da notícia: Darh Vader";
 
         // pendurando os components criados do card_right
         cardRight.appendChild(newsImage);
