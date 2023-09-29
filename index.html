@@ -13,28 +13,33 @@
     </head>
     <body>
         <div class="container">
-            <div class="card">
-                <div class="card_left">
-                    <span>By Lucas Gonçalves</span>
-                    <a href="#">Darth Vader Contrata Devs</a>
-                    <p>Darth Vader procura desenvolvedores que saibam trabalhar com Web Components</p>
-                </div>
-                <div class="card_right">
-                    <img src="assets/darthVader01.jpg" alt="Darth Vader" srcset="">
-                </div>
+            <div>
+                <!-- Card News totalmente construída em Web Components -->
+                <card-news 
+                    autor="Lucas"
+                    title="Darth Vader Contrata"
+                    link-url="www.google.com.br"
+                    photo ="assets/darthVader01.jpg"
+                    content="Darth Vader procura desenvolvedores que saibam trabalhar com Web Components."
+                ></card-news>
+                
+                <card-news 
+                    autor=""
+                    title="Darth Vader demite funcionários"
+                    link-url="www.google.com.br/darthvader"
+                    photo =""
+                    content="Darth Vader demitiu todos os funcionários da sua empresa. :C"
+                ></card-news>
+
+                <card-news 
+                    autor="Yoda"
+                    title="Darth Vader demite funcionários"
+                    link-url="www.google.com.br/darthvader"
+                    photo =""
+                    content="Darth Vader demitiu todos os funcionários da sua empresa. :C"
+                ></card-news>
             </div>
         </div>
 
-        <div>
-            <!-- Card News totalmente construída em Web Components -->
-            <card-news 
-                autor="Lucas"
-                title="Darth Vader Contrata"
-                link-url="www.google.com.br"
-                photo ="assets/darthVader01.jpg"
-                content="Darth Vader procura desenvolvedores que saibam trabalhar com Web Components."
-            >
-            </card-news>
-        </div>
     </body>
 </html>

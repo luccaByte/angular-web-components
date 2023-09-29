@@ -52,7 +52,45 @@ class CardNews extends HTMLElement{
     }
 
     styles(){
+        //transformando todo conteúdo css do card em component
+        const style = document.createElement("style")
+        style.textContent = `
+            .card {
+                width: 80%;
+                -webkit-box-shadow: 7px 4px 22px 3px rgba(0,0,0,0.6);
+                -moz-box-shadow: 7px 4px 22px 3px rgba(0,0,0,0.6);
+                box-shadow: 7px 4px 22px 3px rgba(0,0,0,0.6);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .card_left {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 10px;
+            }
+            
+            .card_left > span {
+                font-weight: 400;
+            
+            }
+            
+            .card_left > a {
+                margin-top: 15px;
+                font-size: 25px;
+                color: black;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            
+            .card_left > p {
+                color: rgb(49, 49, 49);
+            }
+        `
 
+        return style;
     }
 }
 
